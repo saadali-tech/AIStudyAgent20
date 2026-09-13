@@ -2,7 +2,7 @@ import streamlit as st
 import PyPDF2
 import json
 import re
-from groq import Groq
+import groq
 
 
 # ============================================================
@@ -119,7 +119,7 @@ def get_client():
     if not api_key:
         return None
 
-    return Groq(api_key=api_key)
+    return groq.Groq(api_key=api_key)
 
 
 
